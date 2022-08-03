@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <div style={{width: '555', height: '777px', border: 'solid 2px #eee', backgroundColor: '#f5f5f5'}}>
     <Canvas camera={{zoom: 13, position:[1, .5 , -1]}} >
       {/* <focus-camera> */}
-      <ambientLight intensity={.5} />
+      <ambientLight intensity={1.5} />
       <pointLight position={[10, 10, 10]} />
       <Suspense fallback={null}>
         <Solo 
