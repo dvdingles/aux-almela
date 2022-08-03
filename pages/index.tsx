@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Stage } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import type { NextPage } from 'next'
 import { Suspense } from 'react'
@@ -14,10 +14,12 @@ const Home: NextPage = () => {
       <ambientLight intensity={1.5} />
       <pointLight position={[10, 10, 10]} />
       <Suspense fallback={null}>
-        <Solo 
-          position={[0,0,0]}
-          rotation={[0,1.5,0]}
+        <Stage contactShadow={{ resolution: 1024, scale: 1}}>
+          <Solo 
+            position={[0,0,0]}
+            rotation={[0,1.5,0]}
           />
+        </Stage>
       </Suspense>
       <OrbitControls autoRotate />
     </Canvas>
