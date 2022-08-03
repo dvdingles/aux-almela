@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <ambientLight intensity={1.5} />
       <pointLight position={[10, 10, 10]} />
       <Suspense fallback={null}>
-        <Stage contactShadow={{ resolution: 1024, scale: 1}}>
+        <Stage contactShadow={{ blur: 3, opacity: 1}}>
           <Solo 
             position={[0,0,0]}
             rotation={[0,1.5,0]}
