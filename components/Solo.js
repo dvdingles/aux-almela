@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Solo(props) {
-  const { nodes, materials } = useGLTF("/3D_ALMELA_WEB.gltf");
+  const { nodes, materials } = useGLTF("/4D_ALMELA_WEB.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -31,4 +31,4 @@ export function Solo(props) {
   );
 }
 
-useGLTF.preload("/3D_ALMELA_WEB.gltf");
+useGLTF.preload("/4D_ALMELA_WEB.gltf");
