@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <pointLight position={[10, 10, 10]} />
       <directionalLight position={[-1, 0.5, 0]} />
       <Suspense fallback={null}>
-      {/* <Environment far={10} files="/snowy_park_01_4k.hdr" ground={{ height: 10, scale: 1 }} /> */}
+      <Environment far={10} files="/env.hdr" ground={{ height: 10, scale: 1 }} />
         
           <Dav 
             position={[0,0.06,0]}
