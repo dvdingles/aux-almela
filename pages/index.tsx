@@ -29,7 +29,7 @@ const Home: NextPage = () => {
       <Environment far={10} files="/old_depot_2k.hdr" ground={{ height: 10, scale: 1 }} />
         
           <Dav 
-            position={[0,0.08,0]}
+            position={[0,0.06,0]}
             // rotation={[0,1.5,0]}
           />
        
