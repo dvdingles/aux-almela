@@ -20,7 +20,7 @@ const Home: NextPage = () => {
           width: 100,
           height: 100,
         }
-        ,  focus: 10, zoom: 9, position:[0, .2, 1]}} >
+        ,  focus: 10, fov: 75 ,zoom: 9, position:[0, .2, 1]}} >
       {/* <focus-camera> */}
       <ambientLight intensity={1} />
       <pointLight position={[10, 10, 10]} />
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
        
       </Suspense>
       <OrbitControls autoRotate autoRotateSpeed={1} />
-      <ContactShadows resolution={1024} scale={1} position={[0, -.02, 0]} blur={1} opacity={1} far={1} color="#000" />
+      <ContactShadows resolution={1024} scale={1} position={[0, -.01, 0]} blur={3} opacity={.3} far={1} color="#000" />
     </Canvas>
   </div>
 
