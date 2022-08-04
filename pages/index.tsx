@@ -22,11 +22,11 @@ const Home: NextPage = () => {
         }
         ,  focus: 10, fov: 75 ,zoom: 9, position:[0, .2, 1]}} >
       {/* <focus-camera> */}
-      <ambientLight intensity={1} />
+      <ambientLight intensity={1.5} />
       <pointLight position={[10, 10, 10]} />
       <directionalLight position={[-1, 0.5, 0]} />
       <Suspense fallback={null}>
-      {/* <Environment far={10} files="/old_depot_2k.hdr" ground={{ height: 10, scale: 1 }} /> */}
+      <Environment far={10} files="/snowy_park_01_4k.hdr" ground={{ height: 10, scale: 1 }} />
         
           <Dav 
             position={[0,0.06,0]}
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
        
       </Suspense>
       <OrbitControls autoRotate autoRotateSpeed={1} />
-      <ContactShadows resolution={1024} scale={1} position={[0, -.01, 0]} blur={3} opacity={.3} far={1} color="#000" />
+      <ContactShadows resolution={1024} scale={1} position={[0, -.01, 0]} blur={3} opacity={.3} far={1} color="#8a6246" />
     </Canvas>
   </div>
 
