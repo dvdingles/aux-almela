@@ -1,4 +1,4 @@
-import { ContactShadows, OrbitControls, Stage } from '@react-three/drei'
+import { ContactShadows, Environment, OrbitControls, Stage } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import type { NextPage } from 'next'
 import { Suspense } from 'react'
@@ -10,20 +10,32 @@ import { Dav } from '../components/Dav'
 const Home: NextPage = () => {
   return (
     <div style={{width: '555', height: '777px', border: 'solid 2px #eee', backgroundColor: '#f5f5f5'}}>
-    <Canvas camera={{zoom: 3, position:[0, .2, .5]}} >
+    <Canvas camera={{view: 
+        {
+          enabled: true,
+          fullWidth: 100,
+          fullHeight: 100,
+          offsetX: 0,
+          offsetY: -30,
+          width: 100,
+          height: 100,
+        }
+        ,  focus: 10, zoom: 9, position:[0, .2, 1]}} >
       {/* <focus-camera> */}
-      <ambientLight intensity={1.5} />
+      <ambientLight intensity={1} />
       <pointLight position={[10, 10, 10]} />
+      <directionalLight position={[-1, 0.5, 0]} />
       <Suspense fallback={null}>
+      <Environment far={10} files="/old_depot_2k.hdr" ground={{ height: 10, scale: 1 }} />
         
           <Dav 
-            position={[0,0,0]}
-            rotation={[0,1.5,0]}
+            position={[0,0.08,0]}
+            // rotation={[0,1.5,0]}
           />
        
       </Suspense>
       <OrbitControls autoRotate />
-      <ContactShadows resolution={1024} scale={1} position={[0, -.05, 0]} blur={1} opacity={0.3} far={1} color="#1A5AaF" />
+      <ContactShadows resolution={1024} scale={1} position={[0, -.02, 0]} blur={1} opacity={1} far={1} color="#000" />
     </Canvas>
   </div>
 

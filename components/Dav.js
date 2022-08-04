@@ -10,20 +10,20 @@ export function Dav(props) {
   return (
     <group {...props} dispose={null}>
       <mesh
-        castShadow
-        receiveShadow
+        // castShadow
+        // receiveShadow
         geometry={nodes["TQ_ARD-geom"].geometry}
         material={materials.TQ_ARD_front}
       />
       <mesh
-        castShadow
-        receiveShadow
+        // castShadow
+        // receiveShadow
         geometry={nodes["TQ_ARD-geom_1"].geometry}
         material={materials.TQ_ARD_back}
       />
       <mesh
-        castShadow
-        receiveShadow
+        // castShadow
+        // receiveShadow
         geometry={nodes["TQ_ARD-geom_2"].geometry}
         material={materials.TQ_ARD_edge}
       />
