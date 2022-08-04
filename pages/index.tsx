@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <pointLight position={[10, 10, 10]} />
       <directionalLight position={[-1, 0.5, 0]} />
       <Suspense fallback={null}>
-      <Environment far={10} files="/old_depot_2k.hdr" ground={{ height: 10, scale: 1 }} />
+      {/* <Environment far={10} files="/old_depot_2k.hdr" ground={{ height: 10, scale: 1 }} /> */}
         
           <Dav 
             position={[0,0.06,0]}
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           />
        
       </Suspense>
-      <OrbitControls autoRotate />
+      <OrbitControls autoRotate autoRotateSpeed={1} />
       <ContactShadows resolution={1024} scale={1} position={[0, -.02, 0]} blur={1} opacity={1} far={1} color="#000" />
     </Canvas>
   </div>
