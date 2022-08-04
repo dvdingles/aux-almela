@@ -23,7 +23,7 @@ const Home: NextPage = () => {
        
       </Suspense>
       <OrbitControls autoRotate />
-      <ContactShadows resolution={1024} scale={20} position={[0, -1.02, 0]} blur={1} opacity={0.5} far={3} color="#1A5AaF" />
+      <ContactShadows resolution={1024} scale={1} position={[0, -.05, 0]} blur={1} opacity={0.3} far={1} color="#1A5AaF" />
     </Canvas>
   </div>
 
